@@ -1,0 +1,255 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #0b4706;
+    background-color: #beb19e;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/*HEADER settings*/
+
+.header_container{
+    background-image: url(./Images/pexels-karolina-grabowska-4705833.jpg);
+    height: auto;
+    width: auto;
+    padding: 34px;
+    margin:0%;
+}
+
+/* Customização da foto inicial HEADER => IMAGEM do PORTFOLIO */
+header img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 5px solid #0b4706;
+    float: left;
+    margin: 0%;
+}
+
+h1{
+    font-size: 32px;
+    letter-spacing: 3px;
+    
+}
+
+h2{
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+h3{
+    font-size: 25px;
+    text-align: center;
+}
+
+.centerdesc {
+    text-align: center;
+}
+
+a:hover{
+    background-color: whitesmoke;
+}
+
+/* Configurações do Menu HAMBURGER */
+
+.checkbox_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: 400ms ease-in-out 0s;
+}
+
+.checkbox .trace{
+    height: 2px;
+    width: 50px;
+    position: absolute;
+    background-color: black;
+    border-radius: 4px;
+    transition: .5s ease-in-out;
+}
+
+.checkbox .trace:nth-child(1){
+    top: 26px;
+    transform:rotate(0);
+}
+
+.checkbox .trace:nth-child(2){
+    top: 46px;
+    transform:rotate(0);
+}
+
+.checkbox .trace:nth-child(3){
+    top: 66px;
+    transform:rotate(0);
+}
+
+.checkbox .trace:nth-child(4){
+    top: 86px;
+    transform:rotate(0);
+}
+
+#toggle{
+    display: none;
+}
+
+/* Configurações do MENU */
+
+.menu{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background-color: transparent;
+    height: 4px;
+    width: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 0px whitesmoke;
+    z-index: -1;
+    transition: 400ms ease-in-out 0s;
+}
+
+.menu_items{
+    background-image: url(./Images/pexels-karolina-grabowska-4705833.jpg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: 400ms ease-in-out 0s;
+}
+
+.menu_items ul{
+    list-style-type: none;
+}
+
+.menu_items u li a {
+    margin: 10px 0;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 40px;
+}
+
+
+/* Animações do MENU */
+
+#toggle:checked + .checkbox .trace:nth-child(1){
+    transform: rotate(45deg);
+    top: 47px;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(2){
+    transform: translate(-100px);
+    width: 30px;
+    visibility: hidden;
+    opacity:0;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(3){
+    transform: rotate(-45deg);
+    top: 48px;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(4){
+    transform: translate(100px);
+    width: 30px;
+    visibility: hidden;
+    opacity:0;
+}
+
+#toggle:checked + .checkbox{
+    background-image: url(./Images/pexels-karolina-grabowska-4705833.jpg);
+}
+
+/* ~ significa que essas mesmas propriedades definidas anteriormente se apliquem para todos os itens que precedem ao MENU */
+#toggle:checked ~ .menu{
+    box-shadow: 0px 0px 0px 100vmax whitesmoke;
+    z-index: 1;
+}
+
+#toggle:checked ~ .menu_items{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Propriedades para estilizar/configurar o formato/visualização do FORMULÁRIO e dos campos de preenchimento */
+
+form{
+    width: 500px;
+    margin: 0 auto;
+    background-color: #f0efec;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px #333;
+}
+
+fieldset{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+input,
+label{
+    display:block;
+    width: 100%;
+    box-sizing: border-box;
+    color: rgb(94, 63, 30);
+}
+
+label{
+    margin-bottom: .25em;
+}
+
+input{
+    padding: .75em;
+    border-radius: 5px;
+    margin-bottom: 1.5em;
+    border: 1px solid #bbb;
+    font-size: 1em;
+}
+
+legend{
+    padding: 1em;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: rgb(94, 63, 30);
+}
+
+
+/* Configuração do FOOTER */
+footer{
+   font-size: small;
+    background-color: #7e795b;
+    display: flex;
+    color: black;
+    height: auto;
+    width: auto;
+    letter-spacing: 2px;
+    justify-content: space-between;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
